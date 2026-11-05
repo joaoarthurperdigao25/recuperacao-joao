@@ -1,157 +1,376 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperação</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atividade de Recuperação - 2º trimestre</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="topo">
+  <p class="instituicao">CEFET/RJ – Campus Nova Friburgo · Técnico em Informática · Programação de Clientes Web</p>
+  <h1>Atividade de Recuperação do 2º trimestre</h1>
+  <nav class="indice" aria-label="Índice de exercícios">
+    <a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a><a href="#ex17">17</a><a href="#ex18">18</a><a href="#ex19">19</a><a href="#ex20">20</a><a href="#ex21">21</a><a href="#ex22">22</a><a href="#ex23">23</a><a href="#ex24">24</a><a href="#ex25">25</a><a href="#ex26">26</a><a href="#ex27">27</a><a href="#ex28">28</a><a href="#ex29">29</a><a href="#ex30">30</a><a href="#ex31">31</a>
+  </nav>
+</header>
 
-    <header>
-        <h1>Atividade de Recuperação 2º Trimestre</h1>
-    </header>
+<main>
+  <h2 class="grupo">Arrays</h2>
 
-    <main>
-       
-        <section class="card">
-            <h2>1. Quadrados Dinâmicos (DOM)</h2>
-            <button id="btnCriarQuadrado">Criar Quadrado</button>
-            <div id="containerQuadrados"></div>
-        </section>
+  <section class="exercicio" id="ex1">
+    <h3><span class="num">1</span>Ordenar 2 números</h3>
+    <p class="enunciado">Informe dois números e veja-os em ordem crescente, sem usar sort.</p>
+    <div class="campos">
+      <input type="number" step="any" id="n1a" placeholder="Número 1">
+      <input type="number" step="any" id="n1b" placeholder="Número 2">
+      <button type="button" id="b1">Ordenar</button>
+    </div>
+    <div class="saida" id="o1"></div>
+  </section>
 
-        <section class="card">
-            <h2>2. Lista de Nomes</h2>
-            <ul id="listaNomes"></ul>
-            <input type="text" id="inputNome" name="nome" placeholder="Digite um nome">
-            <button onclick="adicionarNomeLista()">Adicionar</button>
-        </section>
+  <section class="exercicio" id="ex2">
+    <h3><span class="num">2</span>Ordenar 3 números</h3>
+    <p class="enunciado">Informe três números e veja-os em ordem crescente, com função própria.</p>
+    <div class="campos">
+      <input type="number" step="any" id="n2a" placeholder="Número 1">
+      <input type="number" step="any" id="n2b" placeholder="Número 2">
+      <input type="number" step="any" id="n2c" placeholder="Número 3">
+      <button type="button" id="b2">Ordenar</button>
+    </div>
+    <div class="saida" id="o2"></div>
+  </section>
 
-       
-        <section class="card">
-            <h2>3. Cor de Fundo (Botões)</h2>
-            <div class="grupo-botoes">
-                <button onclick="mudarCorFundo('red')">Vermelho</button>
-                <button onclick="mudarCorFundo('green')">Verde</button>
-                <button onclick="mudarCorFundo('blue')">Azul</button>
-                <button onclick="mudarCorFundo('yellow')">Amarelo</button>
-            </div>
-        </section>
+  <section class="exercicio" id="ex3">
+    <h3><span class="num">3</span>Inverter 3 números</h3>
+    <p class="enunciado">Informe três números, veja o array e depois a sequência invertida.</p>
+    <div class="campos">
+      <input type="number" step="any" id="n3a" placeholder="Número 1">
+      <input type="number" step="any" id="n3b" placeholder="Número 2">
+      <input type="number" step="any" id="n3c" placeholder="Número 3">
+      <button type="button" id="b3">Inverter</button>
+    </div>
+    <div class="saida" id="o3"></div>
+  </section>
 
-        <section class="card">
-            <h2>4. Cores por Mouseover</h2>
-            <a href="#" onmouseover="mudarCorFundo('tomato')">Vermelho Tomate</a> | 
-            <a href="#" onmouseover="mudarCorFundo('mediumseagreen')">Verde Marinho</a> | 
-            <a href="#" onmouseover="mudarCorFundo('dodgerblue')">Azul Céu</a> | 
-            <a href="#" onmouseover="mudarCorFundo('gold')">Dourado</a>
-        </section>
+  <section class="exercicio" id="ex4">
+    <h3><span class="num">4</span>Inverter um array de qualquer tamanho</h3>
+    <p class="enunciado">Diga quantos números deseja inserir, preencha cada elemento e exiba o array e o seu inverso.</p>
+    <div class="campos">
+      <input type="number" id="q4" min="1" max="50" placeholder="Quantidade">
+      <button type="button" id="b4a">Criar campos</button>
+    </div>
+    <div class="campos" id="c4"></div>
+    <div class="campos">
+      <button type="button" id="b4b" hidden>Exibir array e inverso</button>
+    </div>
+    <div class="saida" id="o4"></div>
+  </section>
 
-       
-        <section class="card">
-            <h2>5. Select de Cores</h2>
-            <select id="selectCores" onchange="mudarCorFundo(this.value)">
-                <option value="">Selecione uma cor...</option>
-                <option value="lightcoral">Coral Claro</option>
-                <option value="lightgreen">Verde Claro</option>
-                <option value="lightblue">Azul Claro</option>
-                <option value="lightgoldenrodyellow">Amarelo Claro</option>
-            </select>
-        </section>
+  <section class="exercicio" id="ex5">
+    <h3><span class="num">5</span>Bubble sort</h3>
+    <p class="enunciado">Informe números separados por vírgula ou espaço e ordene com bubble sort.</p>
+    <div class="campos">
+      <input type="text" id="l5" placeholder="Ex.: 9, 4, 7, 1, 8">
+      <button type="button" id="b5">Ordenar</button>
+    </div>
+    <div class="saida" id="o5"></div>
+  </section>
 
-        <section class="card">
-            <h2>6. Ocultar / Mostrar Elemento</h2>
-            <p id="paragrafoAlternar">Este é o parágrafo que pode ser ocultado ou exibido.</p>
-            <button onclick="alternarParagrafo()">Ocultar/Mostrar</button>
-        </section>
+  <section class="exercicio" id="ex6">
+    <h3><span class="num">6</span>Todos os índices de um número</h3>
+    <p class="enunciado">Informe o vetor e o número procurado para ver todas as posições em que ele aparece.</p>
+    <div class="campos">
+      <input type="text" id="l6" placeholder="Ex.: 3, 5, 3, 8, 3">
+      <input type="number" step="any" id="v6" placeholder="Número">
+      <button type="button" id="b6">Buscar</button>
+    </div>
+    <div class="saida" id="o6"></div>
+  </section>
 
-        
-        <section class="card">
-            <h2>7. Validação de Cadastro</h2>
-            <form id="formCadastro" onsubmit="validarCadastro(event)">
-                <input type="text" id="loginUser" placeholder="Login" required><br><br>
-                <input type="password" id="senhaUser" placeholder="Senha (6 a 10 chars)" required><br><br>
-                <input type="password" id="confirmaSenhaUser" placeholder="Confirmar Senha" required><br><br>
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
+  <section class="exercicio" id="ex7">
+    <h3><span class="num">7</span>Fibonacci em array</h3>
+    <p class="enunciado">Informe um inteiro positivo e gere os termos somando elementos anteriores do array.</p>
+    <div class="campos">
+      <input type="number" id="n7" min="1" max="70" placeholder="Quantidade de termos">
+      <button type="button" id="b7">Gerar</button>
+    </div>
+    <div class="saida" id="o7"></div>
+  </section>
 
-        <section class="card">
-            <h2>8. Verificador de Palíndromo</h2>
-            <input type="text" id="inputPalindromo" placeholder="Digite uma palavra">
-            <button onclick="testarPalindromo()">Verificar</button>
-            <p id="resultadoPalindromo"></p>
-        </section>
+  <section class="exercicio" id="ex8">
+    <h3><span class="num">8</span>Fatorial em array</h3>
+    <p class="enunciado">Informe um inteiro positivo e gere os fatoriais usando o elemento anterior do array.</p>
+    <div class="campos">
+      <input type="number" id="n8" min="1" max="50" placeholder="Valor de n">
+      <button type="button" id="b8">Gerar</button>
+    </div>
+    <div class="saida" id="o8"></div>
+  </section>
 
-        
-        <section class="card">
-            <h2>9. Inverter 5 Nomes de Formulário</h2>
-            <div id="camposNomes">
-                <input type="text" class="nomeInverter" placeholder="Pessoa 1"><br>
-                <input type="text" class="nomeInverter" placeholder="Pessoa 2"><br>
-                <input type="text" class="nomeInverter" placeholder="Pessoa 3"><br>
-                <input type="text" class="nomeInverter" placeholder="Pessoa 4"><br>
-                <input type="text" class="nomeInverter" placeholder="Pessoa 5"><br>
-            </div>
-            <button onclick="inverterCamposNomes()">Inverter</button>
-        </section>
+  <section class="exercicio" id="ex9">
+    <h3><span class="num">9</span>Jogo da velha</h3>
+    <p class="enunciado">Informe linha e coluna de 1 a 3. O jogador 1 marca X e o jogador 2 marca O.</p>
+    <div class="campos">
+      <input type="number" id="lin9" min="1" max="3" placeholder="Linha">
+      <input type="number" id="col9" min="1" max="3" placeholder="Coluna">
+      <button type="button" id="b9">Jogar</button>
+      <button type="button" id="r9" class="secundario">Reiniciar</button>
+    </div>
+    <table class="tabuleiro"><tbody id="t9"></tbody></table>
+    <div class="saida" id="s9"></div>
+  </section>
 
-        <section class="card">
-            <h2>10. Cadastro de Cliente (Dinâmico)</h2>
-            <form>
-                <label>Nome:</label> <input type="text"><br><br>
-                <label>Tipo:</label>
-                <input type="radio" name="tipoPessoa" value="fisica" onclick="controlarCamposPessoa()"> Física
-                <input type="radio" name="tipoPessoa" value="juridica" onclick="controlarCamposPessoa()"> Jurídica<br><br>
-                
-                <label>CPF:</label> <input type="text" id="campoCPF" disabled><br><br>
-                <label>CNPJ:</label> <input type="text" id="campoCNPJ" disabled><br><br>
-                <label>Data Nasc.:</label> <input type="text" id="campoData" onkeypress="return apenasNumeros(event)" disabled><br><br>
-                <label>CEP:</label> <input type="text" id="campoCEP" onkeypress="return apenasNumeros(event)"><br><br>
-                <label>Endereço:</label> <input type="text"><br><br>
-                <label>Telefone:</label> <input type="text"><br><br>
-                <label>E-mail:</label> <input type="email"><br>
-            </form>
-        </section>
+  <section class="exercicio" id="ex10">
+    <h3><span class="num">10</span>Soma dos números</h3>
+    <p class="enunciado">Informe um conjunto de números para calcular a soma.</p>
+    <div class="campos">
+      <input type="text" id="l10" placeholder="Ex.: 10, 20, 30">
+      <button type="button" id="b10">Somar</button>
+    </div>
+    <div class="saida" id="o10"></div>
+  </section>
 
-        
-        <section class="card">
-            <h2>11. Intercalar Palavras</h2>
-            <input type="text" id="palavra1" placeholder="Palavra 1">
-            <input type="text" id="palavra2" placeholder="Palavra 2">
-            <button onclick="intercalarPalavras()">Intercalar</button><br><br>
-            <input type="text" id="resultadoIntercalado" placeholder="Resultado desabilitado" disabled>
-        </section>
+  <section class="exercicio" id="ex11">
+    <h3><span class="num">11</span>Média dos números</h3>
+    <p class="enunciado">Informe um conjunto de números para calcular a média.</p>
+    <div class="campos">
+      <input type="text" id="l11" placeholder="Ex.: 7, 8.5, 6">
+      <button type="button" id="b11">Calcular média</button>
+    </div>
+    <div class="saida" id="o11"></div>
+  </section>
 
-        <section class="card">
-            <h2>12. Estatísticas de 3 Números</h2>
-            <input type="number" id="numEstat1" placeholder="Num 1">
-            <input type="number" id="numEstat2" placeholder="Num 2">
-            <input type="number" id="numEstat3" placeholder="Num 3">
-            <button onclick="calcularEstatisticas()">Calcular</button>
-            <div id="tabelaEstatisticas"></div>
-        </section>
+  <section class="exercicio" id="ex12">
+    <h3><span class="num">12</span>Filtrar números primos</h3>
+    <p class="enunciado">Informe números e veja apenas os primos.</p>
+    <div class="campos">
+      <input type="text" id="l12" placeholder="Ex.: 2, 4, 7, 9, 11, 15">
+      <button type="button" id="b12">Filtrar</button>
+    </div>
+    <div class="saida" id="o12"></div>
+  </section>
 
-        <section class="card">
-            <h2>13. Pesquisa de Palavra em Texto</h2>
-            <input type="text" id="inputBusca" placeholder="Palavra a buscar">
-            <button onclick="pesquisarTexto()">Pesquisar</button>
-            <p id="msgBusca"></p>
-            <div id="blocoTexto" style="margin-top: 10px; line-height: 1.6;">
-                A programação de clientes web envolve o desenvolvimento de interfaces interativas utilizando HTML, CSS e JavaScript. O aprendizado de algoritmos e manipulação do DOM é essencial para construir aplicações web robustas e dinâmicas.
-            </div>
-        </section>
+  <section class="exercicio" id="ex13">
+    <h3><span class="num">13</span>Frutas em ordem alfabética decrescente</h3>
+    <p class="enunciado">Array: mamão, uva, melancia, banana.</p>
+    <div class="saida" id="o13"></div>
+  </section>
 
-        <section class="card">
-            <h2>14. Galeria de Miniaturas</h2>
-            <div class="galeria-miniaturas">
-                <img src="https://picsum.photos/id/10/100/100" onclick="ampliarImagem(this.src)" alt="Miniatura 1">
-                <img src="https://picsum.photos/id/20/100/100" onclick="ampliarImagem(this.src)" alt="Miniatura 2">
-                <img src="https://picsum.photos/id/30/100/100" onclick="ampliarImagem(this.src)" alt="Miniatura 3">
-            </div>
-            <div id="divAmpliada" style="margin-top: 15px;"></div>
-        </section>
-    </main>
+  <section class="exercicio" id="ex14">
+    <h3><span class="num">14</span>Estados em um select</h3>
+    <p class="enunciado">Array: GO, MG, SP, RJ, AM, PA, preenchendo o select em ordem alfabética.</p>
+    <div class="campos">
+      <select id="s14"></select>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <section class="exercicio" id="ex15">
+    <h3><span class="num">15</span>Agenda 5x2</h3>
+    <p class="enunciado">Informe os dias úteis da semana e um compromisso para cada dia.</p>
+    <div class="agenda" id="c15"></div>
+    <div class="campos">
+      <button type="button" id="b15">Imprimir agenda</button>
+    </div>
+    <div id="o15"></div>
+  </section>
+
+  <h2 class="grupo">Exercícios DOM</h2>
+
+  <section class="exercicio" id="ex16">
+    <h3><span class="num">16</span>Quadrados vermelhos</h3>
+    <p class="enunciado">Cada clique no botão cria um novo quadrado vermelho de 100px.</p>
+    <div class="campos">
+      <button type="button" id="b16">Criar quadrado</button>
+    </div>
+    <div class="area-quadrados" id="c16"></div>
+  </section>
+
+  <section class="exercicio" id="ex17">
+    <h3><span class="num">17</span>Quadrados com cor aleatória</h3>
+    <p class="enunciado">Passe o mouse sobre um quadrado para trocar sua cor.</p>
+    <div class="campos">
+      <button type="button" id="b17">Criar quadrado</button>
+    </div>
+    <div class="area-quadrados" id="c17"></div>
+  </section>
+
+  <section class="exercicio" id="ex18">
+    <h3><span class="num">18</span>Lista a partir de um array</h3>
+    <p class="enunciado">Array: Diego, Gabriel, Lucas.</p>
+    <ul class="lista" id="u18"></ul>
+  </section>
+
+  <section class="exercicio" id="ex19">
+    <h3><span class="num">19</span>Adicionar itens à lista</h3>
+    <p class="enunciado">Digite um nome e clique em Adicionar. O campo é limpo após o clique.</p>
+    <div class="campos">
+      <input type="text" name="nome" id="nome19" placeholder="Nome">
+      <button onClick="adicionar()">Adicionar</button>
+    </div>
+    <ul class="lista" id="u19"></ul>
+  </section>
+
+  <h2 class="grupo">DOM e Forms</h2>
+
+  <section class="exercicio" id="ex20">
+    <h3><span class="num">20</span>Cor de fundo por botões</h3>
+    <p class="enunciado">Quatro botões alteram o plano de fundo da página.</p>
+    <form class="campos" onsubmit="return false">
+      <button type="button" class="cor20" data-cor="red">Vermelho</button>
+      <button type="button" class="cor20" data-cor="green">Verde</button>
+      <button type="button" class="cor20" data-cor="blue">Azul</button>
+      <button type="button" class="cor20" data-cor="yellow">Amarelo</button>
+    </form>
+  </section>
+
+  <section class="exercicio" id="ex21">
+    <h3><span class="num">21</span>Cor de fundo por links</h3>
+    <p class="enunciado">Passe o mouse sobre um link para mudar o plano de fundo.</p>
+    <div class="campos links">
+      <a href="#ex21" class="link21" data-cor="red">Vermelho</a>
+      <a href="#ex21" class="link21" data-cor="green">Verde</a>
+      <a href="#ex21" class="link21" data-cor="blue">Azul</a>
+      <a href="#ex21" class="link21" data-cor="yellow">Amarelo</a>
+    </div>
+  </section>
+
+  <section class="exercicio" id="ex22">
+    <h3><span class="num">22</span>Cor de fundo por select</h3>
+    <p class="enunciado">Escolha uma cor na lista para mudar o plano de fundo.</p>
+    <div class="campos">
+      <select id="s22">
+        <option value="">Escolha uma cor</option>
+        <option value="red">Vermelho</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="exercicio" id="ex23">
+    <h3><span class="num">23</span>Ocultar e mostrar parágrafo</h3>
+    <p class="enunciado">O botão alterna a visibilidade do parágrafo abaixo.</p>
+    <div class="campos">
+      <button type="button" id="b23">Ocultar/Mostrar</button>
+    </div>
+    <p id="p23" class="texto-alvo">Este parágrafo pode ser ocultado ou exibido com o botão acima.</p>
+  </section>
+
+  <section class="exercicio" id="ex24">
+    <h3><span class="num">24</span>Cadastro de usuário</h3>
+    <p class="enunciado">Todos os campos são obrigatórios, as senhas devem ser iguais e ter de 6 a 10 caracteres.</p>
+    <form id="f24" class="formulario" novalidate>
+      <label>Login<input type="text" id="login24"></label>
+      <label>Senha<input type="password" id="senha24"></label>
+      <label>Confirmar senha<input type="password" id="conf24"></label>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <div class="saida" id="m24"></div>
+  </section>
+
+  <section class="exercicio" id="ex25">
+    <h3><span class="num">25</span>Palíndromo</h3>
+    <p class="enunciado">Digite uma palavra para saber se ela é um palíndromo.</p>
+    <form id="f25" class="campos">
+      <input type="text" id="p25" placeholder="Ex.: radar">
+      <button type="submit">Verificar</button>
+    </form>
+    <div class="saida" id="m25"></div>
+  </section>
+
+  <section class="exercicio" id="ex26">
+    <h3><span class="num">26</span>Inverter 5 nomes</h3>
+    <p class="enunciado">Preencha os cinco campos e clique em Inverter.</p>
+    <div class="campos">
+      <input type="text" class="nome26" placeholder="Nome 1">
+      <input type="text" class="nome26" placeholder="Nome 2">
+      <input type="text" class="nome26" placeholder="Nome 3">
+      <input type="text" class="nome26" placeholder="Nome 4">
+      <input type="text" class="nome26" placeholder="Nome 5">
+    </div>
+    <div class="campos">
+      <button type="button" id="b26">Inverter</button>
+    </div>
+  </section>
+
+  <section class="exercicio" id="ex27">
+    <h3><span class="num">27</span>Cadastro de cliente</h3>
+    <p class="enunciado">CPF e data de nascimento só ficam ativos para pessoa física; CNPJ só para pessoa jurídica.</p>
+    <form id="f27" class="formulario">
+      <label>Nome<input type="text" id="nome27" required></label>
+      <fieldset>
+        <legend>Pessoa</legend>
+        <label class="radio"><input type="radio" name="pessoa" id="pf27" value="fisica" required>Física</label>
+        <label class="radio"><input type="radio" name="pessoa" id="pj27" value="juridica">Jurídica</label>
+      </fieldset>
+      <label>CPF<input type="text" id="cpf27" disabled></label>
+      <label>CNPJ<input type="text" id="cnpj27" disabled></label>
+      <label>Data de nascimento<input type="text" id="nasc27" inputmode="numeric" maxlength="8" placeholder="DDMMAAAA" disabled></label>
+      <label>Endereço<input type="text" id="end27" required></label>
+      <label>CEP<input type="text" id="cep27" inputmode="numeric" maxlength="8" required></label>
+      <label>Telefone<input type="text" id="tel27" required></label>
+      <label>E-mail<input type="email" id="email27" required></label>
+      <button type="submit">Cadastrar cliente</button>
+    </form>
+    <div class="saida" id="m27"></div>
+  </section>
+
+  <section class="exercicio" id="ex28">
+    <h3><span class="num">28</span>Palavras intercaladas</h3>
+    <p class="enunciado">Informe duas palavras e veja as letras intercaladas em um campo desabilitado.</p>
+    <div class="campos">
+      <input type="text" id="p28a" placeholder="Palavra 1">
+      <input type="text" id="p28b" placeholder="Palavra 2">
+      <button type="button" id="b28">Intercalar</button>
+    </div>
+    <div class="campos">
+      <input type="text" id="r28" placeholder="Resultado" disabled>
+    </div>
+  </section>
+
+  <section class="exercicio" id="ex29">
+    <h3><span class="num">29</span>Três números em tabela</h3>
+    <p class="enunciado">Veja os números, a soma, a média, o produto, o maior e o menor.</p>
+    <div class="campos">
+      <input type="number" step="any" id="n29a" placeholder="Número 1">
+      <input type="number" step="any" id="n29b" placeholder="Número 2">
+      <input type="number" step="any" id="n29c" placeholder="Número 3">
+      <button type="button" id="b29">Calcular</button>
+    </div>
+    <div id="o29"></div>
+  </section>
+
+  <section class="exercicio" id="ex30">
+    <h3><span class="num">30</span>Pesquisar palavra no texto</h3>
+    <p class="enunciado">Digite uma palavra para contar e destacar as ocorrências no texto.</p>
+    <form id="f30" class="campos">
+      <input type="text" id="q30" placeholder="Palavra">
+      <button type="submit">Pesquisar</button>
+    </form>
+    <div class="saida" id="m30"></div>
+    <p id="t30" class="texto-alvo">A programação para a web reúne HTML, CSS e JavaScript. O HTML define a estrutura da página, o CSS cuida da aparência e o JavaScript adiciona comportamento. Quem aprende programação aprende também a resolver problemas, e cada problema resolvido torna a próxima programação mais simples. Com prática, o JavaScript deixa de parecer difícil e passa a ser uma ferramenta natural para criar páginas interativas.</p>
+  </section>
+
+  <section class="exercicio" id="ex31">
+    <h3><span class="num">31</span>Galeria M x N</h3>
+    <p class="enunciado">Defina linhas e colunas e clique em uma miniatura para ampliá-la.</p>
+    <div class="campos">
+      <input type="number" id="m31" min="1" max="6" value="3" placeholder="Linhas (M)">
+      <input type="number" id="n31" min="1" max="6" value="4" placeholder="Colunas (N)">
+      <button type="button" id="b31">Gerar galeria</button>
+    </div>
+    <div class="saida" id="e31"></div>
+    <div class="galeria" id="g31"></div>
+    <div class="ampliada" id="v31"></div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>Programação de Clientes Web · CEFET/RJ Nova Friburgo</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
